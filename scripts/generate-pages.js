@@ -309,7 +309,7 @@ ${breadcrumb}
           <option value="">필요한 서비스를 선택하세요</option>
           ${serviceOptions}
         </select>
-        <input type="text" name="name" placeholder="성함" required />
+        <input type="text" name="from_name" placeholder="성함" required />
         <input type="tel" name="phone" placeholder="연락처" required />
         <input type="text" name="region" placeholder="지역" value="${defaultRegion}" required />
         <textarea name="message" placeholder="상담 내용을 간단히 적어주세요"></textarea>
@@ -364,7 +364,7 @@ ${breadcrumb}
 <a href="tel:01043932414" class="floating-call">전화 상담 ${phone}</a>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="${prefix}assets/js/contact.js"></script>
+<script src="${prefix}assets/js/contact.js?v=3"></script>
 </body>
 </html>`;
 }

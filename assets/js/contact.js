@@ -23,13 +23,23 @@
       submitBtn.disabled = true;
       submitBtn.textContent = "전송 중...";
 
-      const fd = new FormData(form);
+      function fieldValue(selector) {
+        const el = form.querySelector(selector);
+        return el ? String(el.value || "").trim() : "";
+      }
+
+      const customerName =
+        fieldValue('input[name="from_name"]') ||
+        fieldValue('input[name="name"]') ||
+        fieldValue('input[placeholder="성함"]');
+
       const templateParams = {
-        name: fd.get("name") || fd.get("from_name") || "",
-        phone: fd.get("phone") || "",
-        region: fd.get("region") || "",
-        service: fd.get("service") || "",
-        message: fd.get("message") || "",
+        from_name: customerName,
+        name: customerName,
+        phone: fieldValue('input[name="phone"]'),
+        region: fieldValue('input[name="region"]'),
+        service: fieldValue('select[name="service"]'),
+        message: fieldValue('textarea[name="message"]'),
       };
 
       emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
