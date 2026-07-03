@@ -1,5 +1,5 @@
 (function () {
-  const EMAILJS_PUBLIC_KEY = "JKsVOKPtnWHlr2BCV";
+  const EMAILJS_PUBLIC_KEY = "JKsVOKPtnWHIr2BCV";
   const EMAILJS_SERVICE_ID = "allbarunclean";
   const EMAILJS_TEMPLATE_ID = "template_b4ox5js";
 
@@ -7,7 +7,7 @@
     const form = document.getElementById("contactForm");
     if (!form || typeof emailjs === "undefined") return;
 
-    emailjs.init(EMAILJS_PUBLIC_KEY);
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -28,7 +28,8 @@
           alert("상담 신청이 완료되었습니다. 확인 후 연락드리겠습니다.");
           form.reset();
         })
-        .catch(function () {
+        .catch(function (err) {
+          console.error("EmailJS error:", err);
           alert("전송에 실패했습니다. 전화 상담(010-4393-2414)을 이용해 주세요.");
         })
         .finally(function () {
