@@ -35,16 +35,16 @@
 
   function caseImages(num, service) {
     const yupum = isYupumService(service);
+    const id = pad3(num);
     if (yupum) {
-      const id = pad3(num);
       return {
         before: CASES_BASE + "/before-" + id + ".jpg",
         after: CASES_BASE + "/after-" + id + ".jpg"
       };
     }
     return {
-      before: CASES_BASE + "/waste-before-" + num + ".jpg",
-      after: CASES_BASE + "/waste-after-" + num + ".jpg"
+      before: CASES_BASE + "/waste-before-" + id + ".jpg",
+      after: CASES_BASE + "/waste-after-" + id + ".jpg"
     };
   }
 
