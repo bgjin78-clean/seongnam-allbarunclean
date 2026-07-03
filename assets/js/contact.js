@@ -23,7 +23,16 @@
       submitBtn.disabled = true;
       submitBtn.textContent = "전송 중...";
 
-      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
+      const fd = new FormData(form);
+      const templateParams = {
+        name: fd.get("name") || fd.get("from_name") || "",
+        phone: fd.get("phone") || "",
+        region: fd.get("region") || "",
+        service: fd.get("service") || "",
+        message: fd.get("message") || "",
+      };
+
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
         .then(function () {
           alert("상담 신청이 완료되었습니다. 확인 후 연락드리겠습니다.");
           form.reset();
