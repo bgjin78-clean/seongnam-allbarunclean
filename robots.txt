@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seongnam.allbarunclean.com/sitemap.xml

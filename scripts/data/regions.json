@@ -1,0 +1,34 @@
+{
+  "city": "성남시",
+  "phone": "010-4393-2414",
+  "siteUrl": "https://seongnam.allbarunclean.com",
+  "districts": [
+    {
+      "slug": "bundang",
+      "name": "분당구",
+      "dongs": [
+        { "slug": "pangyo", "name": "판교동" },
+        { "slug": "jeongja", "name": "정자동" },
+        { "slug": "seohyeon", "name": "서현동" },
+        { "slug": "sunae", "name": "수내동" },
+        { "slug": "yatap", "name": "야탑동" },
+        { "slug": "bundang-dong", "name": "분당동" }
+      ]
+    },
+    {
+      "slug": "sujeong",
+      "name": "수정구",
+      "dongs": [
+        { "slug": "wirye", "name": "위례동" },
+        { "slug": "sinheung", "name": "신흥동" }
+      ]
+    },
+    {
+      "slug": "jungwon",
+      "name": "중원구",
+      "dongs": [
+        { "slug": "seongnam-dong", "name": "성남동" }
+      ]
+    }
+  ]
+}

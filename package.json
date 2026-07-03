@@ -1,0 +1,9 @@
+{
+  "name": "allbarumclean-seongnam",
+  "private": true,
+  "scripts": {
+    "generate": "node scripts/generate-pages.js && node scripts/generate-sitemap.js",
+    "pages": "node scripts/generate-pages.js",
+    "sitemap": "node scripts/generate-sitemap.js"
+  }
+}

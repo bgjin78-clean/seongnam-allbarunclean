@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>성남시 고객후기 | 성남 올바른정리</title>
+  <meta name="description" content="성남시 유품정리, 폐기물처리를 이용하신 고객분들의 실제 후기를 확인하세요." />
+  <link rel="canonical" href="https://seongnam.allbarunclean.com/reviews/customer/" />
+  <link rel="icon" href="/images/favicon.png" />
+  <meta property="og:image" content="https://seongnam.allbarunclean.com/images/og-image.jpg" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="/" class="logo">성남 올바른정리</a>
+    <nav class="nav-links">
+      <a href="/#service">서비스</a>
+      <a href="/reviews/">작업후기</a>
+      <a href="/reviews/customer/">고객후기</a>
+      <a href="/#contact">상담접수</a>
+    </nav>
+    <a href="tel:01043932414" class="call-btn">전화 010-4393-2414</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding:72px 20px 64px">
+    <div class="hero-inner">
+      <span class="badge">CUSTOMER</span>
+      <h1>성남시 고객후기</h1>
+      <p>성남시 유품정리·폐기물처리 상담과 작업을 진행한 고객분들의 후기입니다.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="title">
+        <span>TESTIMONIAL</span>
+        <h2>고객 후기</h2>
+        <p id="filterLabel">성남시 전체 고객후기입니다.</p>
+      </div>
+
+      <div class="review-grid" id="customerList">
+        <article class="review-card" data-area="분당구 판교동">
+          <span class="tag">유품정리 · 판교동</span>
+          <strong>상담부터 마무리까지 차분하게 진행해주셨어요</strong>
+          <p>타지역에 있어 직접 정리하기 어려웠는데, 보관할 물품을 따로 구분해 안내해주셔서 안심하고 맡길 수 있었습니다. 작업 후 사진도 보내주셔서 확인이 편했습니다.</p>
+        </article>
+
+        <article class="review-card" data-area="분당구 정자동">
+          <span class="tag">이사폐기물 · 정자동</span>
+          <strong>이사 일정에 맞춰 빠르게 처리해주셨습니다</strong>
+          <p>이사 전날까지 남아 있던 가구와 짐이 많았는데, 일정에 맞춰 정리해주셔서 큰 도움이 됐습니다. 비용도 사전에 안내받은 범위 안에서 진행됐습니다.</p>
+        </article>
+
+        <article class="review-card" data-area="수정구 위례동">
+          <span class="tag">쓰레기집청소 · 위례동</span>
+          <strong>오래된 폐기물도 깔끔하게 정리됐습니다</strong>
+          <p>혼자 처리하기 어려운 양이었는데 분류부터 반출까지 한 번에 진행해주셨습니다. 냄새도 많이 줄었고 다음 임대 준비가 수월해졌습니다.</p>
+        </article>
+
+        <article class="review-card" data-area="분당구 서현동">
+          <span class="tag">빈집정리 · 서현동</span>
+          <strong>빈집 매매 전 정리가 수월했습니다</strong>
+          <p>남아 있던 가구와 생활용품을 정리해 공실 상태로 만들어주셔서 다음 절차가 빨라졌습니다. 상담 응대도 친절했습니다.</p>
+        </article>
+
+        <article class="review-card" data-area="분당구 야탑동">
+          <span class="tag">가정폐기물 · 야탑동</span>
+          <strong>대형 가구 반출도 문제없이 진행됐어요</strong>
+          <p>엘리베이터 사용 가능 여부를 먼저 확인해주시고, 작업 인원도 적절히 배치해주셔서 하루 만에 마무리됐습니다.</p>
+        </article>
+
+        <article class="review-card" data-area="중원구">
+          <span class="tag">고독사청소 · 중원구</span>
+          <strong>민감한 상황에서도 신중하게 진행해주셨습니다</strong>
+          <p>필요한 절차를 단계별로 설명해주시고, 작업 후 소독까지 진행해주셔서 안심할 수 있었습니다.</p>
+        </article>
+      </div>
+
+      <p style="margin-top:24px"><a href="/reviews/" class="card-btn">작업후기 보기</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div><strong>성남 올바른정리</strong><br />성남시 유품정리 · 폐기물처리 전문</div>
+    <div class="footer-links">
+      <a href="/">메인으로</a>
+      <a href="/reviews/">작업후기</a>
+      <a href="/#contact">상담접수</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const area = params.get("area");
+    if (!area) return;
+
+    document.getElementById("filterLabel").textContent = area + " 고객후기입니다.";
+
+    document.querySelectorAll("#customerList .review-card").forEach(function (card) {
+      const cardArea = card.getAttribute("data-area") || "";
+      card.style.display = cardArea.includes(area) ? "" : "none";
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "mainHero": "/images/hero.jpg",
+  "mainDefaultSet": "01",
+  "pageSets": {
+    "index": "01",
+    "bundang": "02",
+    "pangyo": "03",
+    "jeongja": "04",
+    "seohyeon": "05",
+    "sunae": "06",
+    "yatap": "07",
+    "bundang-dong": "08",
+    "sujeong": "09",
+    "wirye": "10",
+    "sinheung": "11",
+    "jungwon": "12",
+    "seongnam-dong": "13"
+  },
+  "cases": {
+    "folder": "/images/cases",
+    "yupumMin": 1,
+    "yupumMax": 50,
+    "wasteMin": 51,
+    "wasteMax": 100
+  },
+  "favicon": "/images/favicon.png",
+  "ogImage": "/images/og-image.jpg",
+  "schema": {
+    "yupum": { "file": "yupum.jpg", "name": "유품정리" },
+    "godoksa": { "file": "godoksa.jpg", "name": "고독사청소" },
+    "special": { "file": "special.jpg", "name": "특수청소" },
+    "trashHouse": { "file": "trash-house.jpg", "name": "쓰레기집청소" },
+    "waste": { "file": "waste.jpg", "name": "폐기물처리" }
+  },
+  "schemaBase": "/images"
+}
