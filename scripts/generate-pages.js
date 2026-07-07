@@ -49,7 +49,8 @@ ${catalog}
 
 function headExtras(prefix, canonical) {
   const iconPath = prefix ? `${prefix}images/favicon.png` : "/images/favicon.png";
-  return `  <link rel="icon" href="${iconPath}" />
+  return `  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="${iconPath}" />
   <link rel="apple-touch-icon" href="${iconPath}" />
   <meta property="og:image" content="${siteUrl}${ogImage}" />
   <script type="application/ld+json">
